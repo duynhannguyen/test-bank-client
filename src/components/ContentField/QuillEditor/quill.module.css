@@ -1,0 +1,51 @@
+.customEditor {
+  :global(.ql-container) {
+    border-color: transparent;
+  }
+  :global(.ql-editor) {
+    padding: 8px 8px 4px 8px;
+
+    font-size: 16px;
+  }
+}
+
+.asTextarea {
+  :global(.ql-editor) {
+    min-height: 127px;
+  }
+}
+
+.customToolbar {
+  :global(.ql-toolbar) {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+
+    background-color: white;
+
+    transform: translateY(calc(100% + 8px));
+  }
+
+  :global(.ql-tooltip) {
+    z-index: 2;
+  }
+
+  :global(.ql-tooltip[data-mode='formula']::before) {
+    content: 'Công thức:';
+  }
+
+  :global(.ql-tooltip.ql-editing a.ql-action::after) {
+    content: 'Lưu';
+  }
+}
+
+.hiddenToolbar {
+  :global(.ql-toolbar) {
+    display: none;
+  }
+}
+
+/* .showToolbar {
+  :global(.ql-toolbar) {
+  }
+} */

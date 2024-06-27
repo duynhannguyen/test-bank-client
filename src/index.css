@@ -1,0 +1,64 @@
+/* globals.css */
+@import 'antd/dist/reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&display=swap'); /* fix Tailwind CSS border styles, form Tailwind CSS's preflight */
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: theme('borderColor.DEFAULT', currentColor); /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -webkit-appearance: none; /* Safari and Chrome */
+  -moz-appearance: none; /* Firefox */
+  -ms-appearance: none; /* Internet Explorer */
+  appearance: none; /* Standard */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+.ct-home-head-section-bg {
+  @apply bg-gradient-to-br from-blue-600 via-blue-600 to-blue-300;
+}
+
+.search-input * {
+  color: black !important;
+}
+
+.search-input *::placeholder {
+  color: #bfbfbf;
+}
